@@ -25,11 +25,11 @@ class validate {
   public function valURL($fieldname) {
     $url = filter_var($_POST[$fieldname], FILTER_SANITIZE_URL);
     // Adds http to beginning of URL if its not there
-    if($parts = parse_url($url)) {
-      if(!isset($parts["scheme"])) {
-        $url = "http://$url";
-      }
-    }
+    //if($parts = parse_url($url)) {
+      //if(!isset($parts["scheme"])) {
+        //$url = "http://$url";
+      //}
+    //}
     if (filter_var($url, FILTER_VALIDATE_URL)) {
       return TRUE;
     } else {
